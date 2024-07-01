@@ -11,17 +11,17 @@ export const PlanetCard = (props) => {
     // by Default method: 'GET'
     fetch(props.url)
       .then((response) => {
-        if (response.status >= 400) {
-          throw new Error(
-            "Oooops! Something went wrong, young Padawan. Please try again"
+        if (response.status != 200) {
+        console.log (
+            "Oooops! Something went wrong, young Padawan. Please try again" , response.status
           );
         }
         return response.json();
       })
-      .then((result) => {
-        setProperties(result.result.properties);
+      .then((data) => {
+        setProperties(data.result.properties);
       })
-      .catch((e) => console.log(error));
+      .catch((error) => console.log(error));
   }, []);
   return (
     properties && (<div class="card col-3">

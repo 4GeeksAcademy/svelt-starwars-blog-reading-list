@@ -7,12 +7,13 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 export const Navbar = () => {
 const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar navbar-dark bg-dark mb-3">
+    <nav className="navbar mb-3 container">
       <Link to="/">
         <span className="navbar-brand mb-0 h1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Star_Wars_Logo..png/640px-Star_Wars_Logo..png"
-            className="img-fluid col-3"
+            src="https://pngimg.com/d/star_wars_logo_PNG9.png"
+            className="img-fluid"
+            style={{height:"50px"}}
           />
         </span>
       </Link>
